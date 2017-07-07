@@ -5,13 +5,17 @@
  */
 body {
   overflow-x: hidden;
-  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .text-muted {
   color: #777777;
 }
 .text-primary {
   color: #fed136;
+}
+.text-secondary {
+  color: #fee17b;
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 p {
   font-size: 14px;
