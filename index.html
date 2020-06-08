@@ -54,7 +54,7 @@
         ga('send', 'pageview');
 
     </script>
-
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 
 <body id="page-top" class="index">
@@ -559,12 +559,12 @@
                         -->
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-3">
+                <div class="col-sm-6 col-md-3" v-for="(person, i) in people" :key="i">
                     <div class="team-member" itemscope itemtype="http://schema.org/Person">
-                        <img src="img/team/abhishek.jpeg" class="img-responsive img-circle" alt="" style="width:67%"
+                        <img :src="person.image" class="img-responsive img-circle" alt="" style="width:67%"
                             itemprop="image">
-                        <h4 itemprop="name">Abhishek Majumdar</h4>
-                        <p class="text-muted" itemprop="jobTitle">Web Development</p>
+                        <h4 itemprop="name">{{person.name}}</h4>
+                        <p class="text-muted" itemprop="jobTitle">{{person.designation}}</p>
                         <!--
                             <ul class="list-inline social-buttons">
                                 <li><a href="#"><i class="fa fa-twitter"></i></a>
@@ -949,7 +949,26 @@
             </div>
         </div>
     </div>
-
+    <!-- VUE BEGIN-->
+    <script>
+        var app = new Vue({
+            el: "#team",
+            data: {
+                'people': [
+                    {
+                        name: 'Ankan Paul',
+                        image: "img/team/ankan.jpeg",
+                        designation: "Web Developer"
+                    },
+                    {
+                        name: 'Arnab Chakravarty',
+                        image: "img/team/ventus-web.jpg",
+                        designation: "Web Developer"
+                    },
+                ]
+            }
+        })
+    </script>
 
 
     <!-- jQuery -->
